@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <script src="script.js">
+
+</script>
+<script>
+    var settings = {
+    "url": "https://reqres.in/api/users",
+    "method": "GET",
+    "timeout": 0,
+  };
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+</script>
+</head>
+
+<body>
+  <div class="justify-content-md-center col-12">
+    <button onclick="document.getElementById('hello').style.display='inline'" class="btn btn-primary"style="width:auto; margin-left:600px; justify-content-md-center;">ADD</button>
+   
+<div id="hello" class="modal">
+  <span onclick="document.getElementById('hello').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content">
+    <div class="col"></div>
+    <div class="container jaan">
+      
+       
+    <label for="user">Username:</label>
+    <input type="text" id="sol"class="form-control" placeholder="Enter your username" name="user"><br>
+    <label for="email">Email:</label>
+    <input type="text"id="mt"class="form-control" placeholder="Enter your Email" name="email" 
+
+    ><br>
+    <button type="button" onclick="Validate();"  data-dismiss="modal"
+ class="btn btn-success">Enter</button>
+    <button  type="button" onclick="document.getElementById('hello').style.display='none'" class="btn btn-success">Cancel</button>
+
+</div>
+</div>
+</div>
+<input type="hidden" id="dataindex">
+<div class="justify-content-md-center">
+<div id="update" class="modal">
+  <span onclick="document.getElementById('update').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content">
+    <div class="col"></div>
+    <div class="container jaan">
+      
+       
+    <label for="user">Username:</label>
+    <input type="text" id="updatesol"class="form-control" placeholder="Enter your username" name="user"><br>
+    <label for="email">Email:</label>
+    <input type="text"id="updatemt"class="form-control" placeholder="Enter your Email" name="email" 
+
+    ><br>
+    <button type="button" onclick="updateValidate()"  data-dismiss="modal"
+ class="btn btn-success">Update</button>
+    <button  type="button" onclick="document.getElementById('update').style.display='none'" class="btn btn-success">Cancel</button>
+
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+  <div class="col-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">User</th>
+          <th scope="col">email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="table1">
+      </tbody>
+    </table>
+  </div>
+
+    
+  </div>
+
+</body>
+</html>
+
+
+    
+
+
+
+      
+
